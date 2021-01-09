@@ -68,7 +68,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // express session
-var oneDay = 24 * 60 * 60 * 1000;
+var oneThousandDay = 24 * 60 * 60 * 1000 * 1000;
 app.use(session(
 {
 	secret: 'secret',
