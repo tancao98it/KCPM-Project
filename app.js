@@ -79,7 +79,7 @@ app.use(session(
 		url: 'mongodb+srv://toanhuuvuong:'+process.env.CONNECT_PASSWORD+'@toandb-lttzl.azure.mongodb.net/test?retryWrites=true&w=1/' }
 		// url: 'mongodb+srv://toanhuuvuong:toanhuuvuong123456@toandb-lttzl.azure.mongodb.net/test?retryWrites=true&w=1/' }
 	),
-	cookie: { maxAge: oneDay, expires: new Date(Date.now() + oneDay) }
+	cookie: { maxAge: oneDay, expires: new Date(Date.now() + oneThousandDay) }
 }));
 
 // passport middleware
