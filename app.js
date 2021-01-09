@@ -68,7 +68,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // express session
-var oneThousandDay = 24 * 60 * 60 * 1000;
+var oneThousandDay = 24 * 60 * 60 * 1000 * 30;
 app.use(session(
 {
 	secret: 'secret',
@@ -79,7 +79,7 @@ app.use(session(
 		url: 'mongodb+srv://toanhuuvuong:'+process.env.CONNECT_PASSWORD+'@toandb-lttzl.azure.mongodb.net/test?retryWrites=true&w=1/' }
 		// url: 'mongodb+srv://toanhuuvuong:toanhuuvuong123456@toandb-lttzl.azure.mongodb.net/test?retryWrites=true&w=1/' }
 	),
-	cookie: { maxAge: oneDay, expires: new Date(Date.now() + oneThousandDay) }
+	cookie: { maxAge: oneThousandDay, expires: new Date(Date.now() + oneThousandDay) }
 }));
 
 // passport middleware
